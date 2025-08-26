@@ -1,0 +1,30 @@
+---
+import Header from "@components/page/Header.astro";
+import Footer from "@components/page/Footer.astro";
+---
+
+<html lang="fa">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="title" content="گنوم فارسی">
+        <meta name="description" content="جامعه فارسی زبان گنوم">
+        <meta name="generator" content={Astro.generator} />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="گنوم">
+        <meta property="og:url" content="https://gnome.org">
+        <meta property="og:description" content="An easy and elegant way to use your computer">
+        <meta property="og:image" content="https://www.gnome.org/img/card.png">
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="stylesheet" href="https://static.gnome.org/css/inter.css">
+
+        <title>گنوم فارسی</title>
+    </head>
+    <body>
+        <Header />
+            <slot />
+        <Footer />
+    </body>
+</html>
