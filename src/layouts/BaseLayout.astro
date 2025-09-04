@@ -1,6 +1,8 @@
 ---
 import Header from "@components/page/Header.astro";
 import Footer from "@components/page/Footer.astro";
+
+import GlobalStyle from "@styles/global.css"
 ---
 
 <html lang="fa">
@@ -19,6 +21,7 @@ import Footer from "@components/page/Footer.astro";
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="stylesheet" href="https://static.gnome.org/css/inter.css">
+        <link rel="stylesheet" href={GlobalStyle}>
 
         <title>گنوم فارسی</title>
     </head>

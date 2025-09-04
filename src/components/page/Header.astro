@@ -1,0 +1,54 @@
+---
+
+---
+
+<header class="header" x-data="alpineData.mobileMenu()">
+    <div class="container">
+        <nav class="nav">
+            <!-- Logo -->
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 25.2c-6.186 0-11.2-5.014-11.2-11.2S9.814 4.8 16 4.8 27.2 9.814 27.2 16 22.186 27.2 16 27.2z"/>
+                    <path d="M20.8 12.8H11.2c-.662 0-1.2.538-1.2 1.2v4c0 .662.538 1.2 1.2 1.2h9.6c.662 0 1.2-.538 1.2-1.2v-4c0-.662-.538-1.2-1.2-1.2z"/>
+                </svg>
+                <span>گنوم فارسی</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">خانه</a></li>
+                <li><a href="articles" class="nav-link">مقالات</a></li>
+                <li><a href="talks" class="nav-link">ارائه‌ها</a></li>
+                <li><a href="contribute" class="nav-link">مشارکت</a></li>
+            </ul>
+
+            <!-- Theme Toggle & Mobile Menu -->
+            <div class="flex gap-sm">
+                <button class="theme-toggle" x-data="alpineData.themeToggle()" @click="toggle()" title="تغییر تم">
+                    <svg width="20" height="20" fill="currentColor" x-show="!isDark">
+                        <path d="M10 2.5a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2.5zM15.364 4.636a.75.75 0 10-1.061-1.061l-1.061 1.061a.75.75 0 101.061 1.061l1.061-1.061zm4 9.9a.75.75 0 10-1.061-1.061l-1.061 1.061a.75.75 0 101.061 1.061l1.061-1.061zm-12.728 0a.75.75 0 01-1.061-1.061l1.061-1.061a.75.75 0 111.061 1.061l-1.061 1.061zm2.728-4a3.5 3.5 0 107 0 3.5 3.5 0 00-7 0zM10 15.5a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15.5z"/>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" x-show="isDark" style="display: none;">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/>
+                    </svg>
+                </button>
+
+                <button class="mobile-menu-btn" @click="toggle()">
+                    <svg width="24" height="24" fill="currentColor">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" x-show="open" x-transition @click.away="close()">
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="nav-link" @click="close()">خانه</a></li>
+                <li><a href="articles" class="nav-link" @click="close()">مقالات</a></li>
+                <li><a href="talks" class="nav-link" @click="close()">ارائه‌ها</a></li>
+                <li><a href="contribute" class="nav-link" @click="close()">مشارکت</a></li>
+            </ul>
+        </div>
+    </div>
+</header>

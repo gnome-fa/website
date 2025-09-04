@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ali-mohammadi",
+    "name": "علی محمدی",
+    "role": "توسعه‌دهنده GTK",
+    "avatar": "assets/img/avatars/ali.jpg",
+    "github": "https://github.com/alimohammadi",
+    "website": "https://alimohammadi.dev"
+  },
+  {
+    "id": "fateme-karimi",
+    "name": "فاطمه کریمی",
+    "role": "طراح رابط کاربری",
+    "avatar": "assets/img/avatars/fateme.jpg",
+    "github": "https://github.com/fatemekarimi",
+    "website": "https://fatemekarimi.ir"
+  },
+  {
+    "id": "hossein-ahmadi",
+    "name": "حسین احمدی",
+    "role": "مدیر جامعه",
+    "avatar": "assets/img/avatars/hossein.jpg",
+    "github": "https://github.com/hosseinahmadi",
+    "website": ""
+  },
+  {
+    "id": "sara-nouri",
+    "name": "سارا نوری",
+    "role": "مترجم و محلی‌ساز",
+    "avatar": "assets/img/avatars/sara.jpg",
+    "github": "https://github.com/saranouri",
+    "website": ""
+  },
+  {
+    "id": "mehdi-rezaei",
+    "name": "مهدی رضایی",
+    "role": "توسعه‌دهنده Core",
+    "avatar": "assets/img/avatars/mehdi.jpg",
+    "github": "https://github.com/mehdirezaei",
+    "website": "https://mehdirezaei.com"
+  },
+  {
+    "id": "zahra-hosseini",
+    "name": "زهرا حسینی",
+    "role": "تست‌کننده",
+    "avatar": "assets/img/avatars/zahra.jpg",
+    "github": "https://github.com/zahrahosseini",
+    "website": ""
+  }
+]

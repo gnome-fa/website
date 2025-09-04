@@ -1,0 +1,128 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+
+    <main>
+        <section class="hero" style="padding: var(--spacing-xl) 0;">
+            <div class="container text-center">
+                <h1 class="hero-title">به ما بپیوندید</h1>
+                <p class="hero-subtitle">راه‌های مختلف برای مشارکت در پروژه گنوم فارسی</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2">
+                    <div class="card card-large">
+                        <div class="mb-lg text-center">
+                            <svg width="64" height="64" fill="var(--brand-primary)" style="margin: 0 auto;">
+                                <path d="M32 8L40 16H36V24H28V16H24L32 8Z"/>
+                                <path d="M12 24H52V48H12V24Z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-center mb-md">توسعه و کدنویسی</h2>
+                        <p class="mb-lg">در توسعه اپلیکیشن‌ها، کتابخانه‌ها و ابزارهای گنوم مشارکت کنید</p>
+                        <ul style="margin-bottom: var(--spacing-lg);">
+                            <li>رفع باگ‌ها</li>
+                            <li>افزودن ویژگی‌های جدید</li>
+                            <li>بهبود عملکرد</li>
+                            <li>نوشتن تست</li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="https://github.com/gnome-farsi" target="_blank" class="btn btn-primary">مشاهده پروژه‌ها</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-large">
+                        <div class="mb-lg text-center">
+                            <svg width="64" height="64" fill="var(--brand-secondary)" style="margin: 0 auto;">
+                                <path d="M24 12L32 20L40 12L48 20V44L40 36L32 44L24 36V12Z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-center mb-md">طراحی و ترجمه</h2>
+                        <p class="mb-lg">در بهبود رابط کاربری و محلی‌سازی نرم‌افزارها کمک کنید</p>
+                        <ul style="margin-bottom: var(--spacing-lg);">
+                            <li>طراحی آیکون</li>
+                            <li>ترجمه رابط کاربری</li>
+                            <li>بهبود تجربه کاربری</li>
+                            <li>تست قابلیت‌ها</li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="mailto:design@gnome-farsi.ir" class="btn btn-primary">تماس با تیم طراحی</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-large">
+                        <div class="mb-lg text-center">
+                            <svg width="64" height="64" fill="var(--brand-green)" style="margin: 0 auto;">
+                                <circle cx="32" cy="20" r="8"/>
+                                <path d="M32 32C24 32 16 36 16 44H48C48 36 40 32 32 32Z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-center mb-md">برگزاری رویداد</h2>
+                        <p class="mb-lg">در برگزاری وبینارها، کارگاه‌ها و رویدادهای آموزشی همکاری کنید</p>
+                        <ul style="margin-bottom: var(--spacing-lg);">
+                            <li>ارائه آموزشی</li>
+                            <li>برگزاری کارگاه</li>
+                            <li>مدیریت رویداد</li>
+                            <li>تولید محتوا</li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="mailto:events@gnome-farsi.ir" class="btn btn-primary">پیشنهاد رویداد</a>
+                        </div>
+                    </div>
+
+                    <div class="card card-large">
+                        <div class="mb-lg text-center">
+                            <svg width="64" height="64" fill="var(--brand-orange)" style="margin: 0 auto;">
+                                <path d="M32 8C20 8 12 16 12 28S20 48 32 48 52 40 52 28 44 8 32 8ZM28 36L20 28L24 24L28 28L40 16L44 20L28 36Z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-center mb-md">حمایت مالی</h2>
+                        <p class="mb-lg">از توسعه پروژه و برگزاری رویدادها حمایت مالی کنید</p>
+                        <ul style="margin-bottom: var(--spacing-lg);">
+                            <li>کمک هزینه سرور</li>
+                            <li>حمایت از توسعه‌دهندگان</li>
+                            <li>تجهیزات و ابزار</li>
+                            <li>برگزاری رویداد</li>
+                        </ul>
+                        <div class="text-center">
+                            <a href="mailto:support@gnome-farsi.ir" class="btn btn-primary">حمایت مالی</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container text-center">
+                <h2 class="section-title">شروع کنید</h2>
+                <p class="section-subtitle mb-xl">برای شروع مشارکت با ما در ارتباط باشید</p>
+                
+                <div class="flex gap-lg" style="justify-content: center; flex-wrap: wrap;">
+                    <a href="https://github.com/gnome-farsi" target="_blank" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" fill="currentColor" style="margin-left: var(--spacing-xs);">
+                            <path d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z"/>
+                        </svg>
+                        گیت‌هاب
+                    </a>
+                    <a href="https://t.me/gnome_farsi" target="_blank" class="btn btn-outline btn-large">
+                        <svg width="20" height="20" fill="currentColor" style="margin-left: var(--spacing-xs);">
+                            <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.02-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.93-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.12-.05-.18s-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.13-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.37z"/>
+                        </svg>
+                        تلگرام
+                    </a>
+                    <a href="mailto:info@gnome-farsi.ir" class="btn btn-secondary btn-large">
+                        <svg width="20" height="20" fill="currentColor" style="margin-left: var(--spacing-xs);">
+                            <path d="M2 4C2 2.895 2.895 2 4 2h12c1.105 0 2 .895 2 2v12c0 1.105-.895 2-2 2H4c-1.105 0-2-.895-2-2V4zm2 0v.511l6 4.5 6-4.5V4H4zm0 2.489V16h12V6.489l-6 4.5-6-4.5z"/>
+                        </svg>
+                        ایمیل
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</BaseLayout>

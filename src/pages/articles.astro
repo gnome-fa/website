@@ -1,0 +1,73 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <main class="container" style="padding-top: var(--spacing-xl);" x-data="alpineData.articlesSearch()" x-init="init()">
+        <!-- Page Header -->
+        <div class="section-header mb-xl">
+            <h1 class="section-title">مقالات</h1>
+            <p class="section-subtitle">آموزش‌ها، راهنماها و نوشته‌های تخصصی درباره گنوم</p>
+        </div>
+
+        <!-- Search and Filters -->
+        <div class="search-form">
+            <input type="text" 
+                   class="search-input" 
+                   placeholder="جستجو در مقالات..." 
+                   x-model="searchQuery"
+                   @input.debounce.300ms="filterArticles()">
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn" 
+                    :class="{ active: selectedTag === '' }"
+                    @click="selectTag('')">همه</button>
+            <template x-for="tag in allTags" :key="tag">
+                <button class="filter-btn" 
+                        :class="{ active: selectedTag === tag }"
+                        @click="selectTag(tag)"
+                        x-text="tag"></button>
+            </template>
+        </div>
+
+        <!-- Loading -->
+        <div x-show="loading" class="text-center">
+            <p>در حال بارگذاری...</p>
+        </div>
+
+        <!-- Articles Grid -->
+        <div class="grid grid-auto" x-show="!loading">
+            <template x-for="article in visibleArticles" :key="article.slug">
+                <div class="card article-card" x-show="article.visible">
+                    <div class="article-meta">
+                        <span x-text="article.author"></span>
+                        <span>•</span>
+                        <span x-text="article.persianDate"></span>
+                    </div>
+                    <h2 class="article-title">
+                        <a :href="getArticleUrl(article.slug)" x-text="article.title"></a>
+                    </h2>
+                    <p class="article-excerpt" x-text="article.excerpt"></p>
+                    <div class="article-tags" x-show="article.tags">
+                        <template x-for="tag in article.tags" :key="tag">
+                            <span class="tag" 
+                                  :class="{ 'tag-primary': selectedTag === tag }"
+                                  @click="selectTag(tag)"
+                                  style="cursor: pointer;"
+                                  x-text="tag"></span>
+                        </template>
+                    </div>
+                </div>
+            </template>
+        </div>
+
+        <!-- No Results -->
+        <div x-show="!loading && visibleArticles.length === 0" class="text-center mt-xl">
+            <p>مقاله‌ای یافت نشد.</p>
+            <button @click="searchQuery = ''; selectedTag = ''; filterArticles()" class="btn btn-secondary mt-md">
+                پاک کردن فیلترها
+            </button>
+        </div>
+    </main>
+</BaseLayout>
