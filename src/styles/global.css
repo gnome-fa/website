@@ -715,3 +715,7 @@ li {
 .no-scrollbar::-webkit-scrollbar {
 	display: none;
 }
+
+/* منوی مربوط به حالت موبایل در صفحه‌نمایش بزرگ‌تر پنهان می‌شود و فقط در حالت موبایل نمایش داده می‌شه */
+.mobile-menu { display: none; }
+@media (max-width: 768px) { .mobile-menu { display: block; } .mobile-menu-btn { display: inline-block; } }
