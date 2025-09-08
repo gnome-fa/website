@@ -4,7 +4,7 @@ import Footer from "@components/page/Footer.astro";
 const { pageTitle } = Astro.props;
 const siteTitle = "گنوم فارسی";
 
-import GlobalStyle from "@styles/global.css"
+import "@styles/global.css";
 ---
 
 <html lang="fa-IR">
@@ -23,7 +23,6 @@ import GlobalStyle from "@styles/global.css"
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="stylesheet" href="https://static.gnome.org/css/inter.css">
-        <link rel="stylesheet" href={GlobalStyle}>
 
         <title>{pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle}</title>
     </head>
