@@ -1,4 +1,4 @@
-name: Deploy PRs to GitHub Pages
+name: Deploy site
 
 on:
   pull_request:
@@ -17,11 +17,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install and Build
-        if: github.event.action != 'closed'
-        run: |
-          npm install
-          npm run build
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+      - name: Install dependencies
+        run: bun install
+      - name: Build with Astro
+        run: bun run build
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
