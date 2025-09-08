@@ -54,8 +54,18 @@ const dateOptions = {
           {articles.map((article) => (
             <div class="card article-card">
               <div class="article-meta">
-                <span>{article.data.author}</span>
-                <span>•</span>
+                {(() => {
+                  const authors = Array.isArray(article.data.author) 
+                    ? article.data.author 
+                    : [article.data.author].filter(Boolean);
+                  
+                  return authors.length > 0 && (
+                    <>
+                      <span>{authors.join("، ")}</span>
+                      <span>•</span>
+                    </>
+                  );
+                })()}
                 <span>
                   {new Date(article.data.date).toLocaleDateString("fa-IR", dateOptions)}
                 </span>
