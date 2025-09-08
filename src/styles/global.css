@@ -252,6 +252,7 @@ li {
 
 .grid-auto {
 	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	padding-bottom: 2rem;
 }
 
 .grid-2 {
@@ -715,3 +716,43 @@ li {
 .no-scrollbar::-webkit-scrollbar {
 	display: none;
 }
+
+/* منوی مربوط به حالت موبایل در صفحه‌نمایش بزرگ‌تر پنهان می‌شود و فقط در حالت موبایل نمایش داده می‌شه */
+.mobile-menu { display: none; }
+@media (max-width: 768px) { .mobile-menu { display: block; } .mobile-menu-btn { display: inline-block; } }
+
+/* تنظیم جهت pre به چپ به راست */
+pre.astro-code {
+  direction: ltr;
+  text-align: left;
+}
+
+pre.astro-code .line {
+  direction: ltr;
+  padding-left: 5px;
+}
+
+/* استایل کلی مقاله‌ها و محدود کردن عرض مطالب و استایل قسمت نویسنده*/
+.post {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  .desc {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  .meta {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+  }
+  .content {
+    text-align: justify;
+    line-height: 1.7;
+  }
