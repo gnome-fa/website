@@ -7,6 +7,12 @@ const pageTitle = "مقاله‌ها";
 const articles = (await getCollection("articles"))
   .filter((a) => !a.data.draft)
   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const dateOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -49,6 +55,10 @@ const articles = (await getCollection("articles"))
             <div class="card article-card">
               <div class="article-meta">
                 <span>{article.data.author}</span>
+                <span>•</span>
+                <span>
+                  {new Date(article.data.date).toLocaleDateString("fa-IR", dateOptions)}
+                </span>
               </div>
 
               <h2 class="article-title">
