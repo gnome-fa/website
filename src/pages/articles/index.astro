@@ -1,0 +1,72 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const pageTitle = "مقاله‌ها";
+
+const articles = (await getCollection("articles"))
+  .filter((a) => !a.data.draft)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout pageTitle={pageTitle}>
+   <main class="container" style="padding-top: var(--spacing-xl);" x-data="alpineData.articlesSearch()" x-init="init()">
+        <!-- Page Header -->
+        <div class="section-header mb-xl">
+            <h1 class="section-title">{pageTitle}</h1>
+            <p class="section-subtitle">آموزش‌ها، راهنماها و نوشته‌های تخصصی درباره گنوم</p>
+        </div>
+
+        <!-- Search and Filters
+        <div class="search-form">
+            <input type="text" 
+                   class="search-input" 
+                   placeholder="جستجو در مقالات..." 
+                   x-model="searchQuery"
+                   @input.debounce.300ms="filterArticles()">
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn" 
+                    :class="{ active: selectedTag === '' }"
+                    @click="selectTag('')">همه</button>
+            <template x-for="tag in allTags" :key="tag">
+                <button class="filter-btn" 
+                        :class="{ active: selectedTag === tag }"
+                        @click="selectTag(tag)"
+                        x-text="tag"></button>
+            </template>
+        </div> -->
+
+        <!-- Loading -->
+        <div x-show="loading" class="text-center">
+            <p>در حال بارگذاری...</p>
+        </div>
+        
+        <!-- Articles Grid -->
+        <div class="grid grid-auto">
+          {articles.map((article) => (
+            <div class="card article-card">
+              <div class="article-meta">
+                <span>{article.data.author}</span>
+              </div>
+
+              <h2 class="article-title">
+                <a href={`/articles/${article.slug}`}>{article.data.title}</a>
+              </h2>
+
+              <p class="article-excerpt">{article.data.description}</p>
+
+            </div>
+          ))}
+        </div>
+
+        <!-- No Results -->
+        <div x-show="!loading && visibleArticles.length === 0" class="text-center mt-xl">
+            <p>مقاله‌ای یافت نشد.</p>
+            <button @click="searchQuery = ''; selectedTag = ''; filterArticles()" class="btn btn-secondary mt-md">
+                پاک کردن فیلترها
+            </button>
+        </div>
+    </main>
+</BaseLayout>
