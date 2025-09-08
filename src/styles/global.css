@@ -719,3 +719,14 @@ li {
 /* منوی مربوط به حالت موبایل در صفحه‌نمایش بزرگ‌تر پنهان می‌شود و فقط در حالت موبایل نمایش داده می‌شه */
 .mobile-menu { display: none; }
 @media (max-width: 768px) { .mobile-menu { display: block; } .mobile-menu-btn { display: inline-block; } }
+
+/* تنظیم جهت pre به چپ به راست */
+pre.astro-code {
+  direction: ltr;
+  text-align: left;
+}
+
+pre.astro-code .line {
+  direction: ltr;
+  padding-left: 5px;
+}
