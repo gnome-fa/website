@@ -25,3 +25,6 @@ pnpm-debug.log*
 
 # vscode settings folder
 .vscode/
+
+# ignore github workflow
+.github
