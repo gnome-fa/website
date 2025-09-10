@@ -1,6 +1,6 @@
 # Persian GNOME community
 
-[Banner](/assets/banner.png)
+![Banner](assets/banner.png)
 
 [persian-gnome-badge]: https://gnome-fa.github.io/assets/badges/persian-gnome.svg
 [persian-gnome-url]: https://gnome_fa.t.me/
