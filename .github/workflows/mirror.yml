@@ -15,7 +15,7 @@ jobs:
       - name: Push to GitLab
         run: |
           git remote add gitlab https://$GITLAB_USERNAME:$GITLAB_TOKEN@gitlab.gnome.org/Teams/Websites/fa.gnome.org.git
-          git push --prune gitlab +refs/heads/:refs/heads/ +refs/tags/:refs/tags/
+          git push --mirror gitlab
         env:
           GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
