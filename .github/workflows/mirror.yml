@@ -1,4 +1,4 @@
-name: Mirror to GitLab
+name: Mirror to GitLab (without .github)
 on:
   push:
     branches:
@@ -15,14 +15,17 @@ jobs:
 
       - name: Create filtered mirror branch
         run: |
-          git checkout -b gitlab-mirror
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git checkout -b gitlab-mirror-$(date +%s)
           git rm -rf .github
           git commit -m "Remove .github directory for GitLab mirror"
+          echo "MIRROR_BRANCH=gitlab-mirror-$(date +%s)" >> $GITHUB_ENV
 
       - name: Push to GitLab
         run: |
           git remote add gitlab https://$GITLAB_USERNAME:$GITLAB_TOKEN@gitlab.gnome.org/Teams/Websites/fa.gnome.org.git
-          git push --force gitlab gitlab-mirror:main
+          git push gitlab $MIRROR_BRANCH:main
         env:
           GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
