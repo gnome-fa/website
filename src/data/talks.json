@@ -6,8 +6,8 @@
     "date": "2025-02-27",
     "description": "ارائه و صحبت من توی رویداد 278 تهلاگ (گروه کاربران گنو/لینوکس تهران)\nدرباره‌ی اپلیکیشنم درام ماشین (Drum Machine) و پروسه‌ی بخشی از گنوم سرکل شدنش حرف زدم.",
     "videoUrl": "https://www.youtube.com/watch?v=EfaRrPl_V4I",
-    "slideUrl": "https://example.com/slides1",
-    "tags": ["GTK", "توسعه"],
+    "slideUrl": "https://tehlug.org/events/presentations/278/gnome-circle.pdf",
+    "tags": ["GTK", "توسعه", "Circle", "حلقه"],
     "thumbnail": "/assets/img/talks-thlug-revisto.png"
   }
 ]
