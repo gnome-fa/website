@@ -15,11 +15,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Enable sparse-checkout (exclude .github)
-        run: |
-          git sparse-checkout init --cone
-          git sparse-checkout set ':(exclude).github' .
-
       - name: Push to GitLab
         run: |
           git remote add gitlab https://$GITLAB_USERNAME:$GITLAB_TOKEN@gitlab.gnome.org/Teams/Websites/fa.gnome.org.git
