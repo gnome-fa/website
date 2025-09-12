@@ -6,14 +6,14 @@
     <div class="container">
         <nav class="nav">
             <!-- Logo -->
-            <div class="logo">
-                <img src="/assets/img/gnome_brandmark_dark.svg" width="32" height="32" alt="گنوم فارسی Logo" />
+            <a href="/" class="logo" aria-label="گنوم فارسی - خانه">
+                <img src="/assets/img/gnome_brandmark_dark.svg" width="32" height="32" alt="گنوم فارسی لوگو" />
                 <span>گنوم فارسی</span>
-            </div>
+            </a>
 
             <!-- Desktop Navigation -->
             <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">خانه</a></li>
+                <li><a href="/" class="nav-link">خانه</a></li>
                 <li><a href="/articles" class="nav-link">مقالات</a></li>
                 <li><a href="/talks" class="nav-link">ارائه‌ها</a></li>
                 <li><a href="/contribute" class="nav-link">مشارکت</a></li>
@@ -41,11 +41,37 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu" x-show="open" x-transition @click.away="close()">
             <ul class="mobile-nav-links">
-                <li><a href="#home" class="nav-link" @click="close()">خانه</a></li>
+                <li><a href="/" class="nav-link" @click="close()">خانه</a></li>
                 <li><a href="/articles" class="nav-link" @click="close()">مقالات</a></li>
                 <li><a href="/talks" class="nav-link" @click="close()">ارائه‌ها</a></li>
                 <li><a href="/contribute" class="nav-link" @click="close()">مشارکت</a></li>
             </ul>
         </div>
+        
+        <!-- Auto-set active link based on current pathname -->
+        <script>
+            (function(){
+                try {
+                    const rawPath = location.pathname || '/';
+                    const path = rawPath.replace(/\/+$|^\s+|\s+$/g, '') || '/';
+                    const links = document.querySelectorAll('.nav-links .nav-link, .mobile-nav-links .nav-link');
+                    links.forEach(a=>{
+                        const href = a.getAttribute('href') || '';
+                        let target = href;
+                        if (href === '#' || href === '#home') target = '/';
+                        // Normalize to remove trailing slash except for root
+                        if (target.startsWith('/')) target = (target.replace(/\/+$/, '') || '/');
+                        // Mark active when path equals target or starts with it (for section pages)
+                        if (target === '/') {
+                            if (path === '/') a.classList.add('active'); else a.classList.remove('active');
+                        } else {
+                            if (path === target || path.startsWith(target + '/')) a.classList.add('active'); else a.classList.remove('active');
+                        }
+                    });
+                } catch (e) {
+                    // fail silently
+                }
+            })();
+        </script>
     </div>
 </header>

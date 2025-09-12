@@ -3,27 +3,42 @@
 
 /* متغیرهای CSS برای سیستم طراحی */
 :root {
-	/* رنگ‌ها */
+	/* رنگ‌ها (GNOME HIG palette mapping) */
 	--brand-primary: #3584e4;
+	/* Blue 3 */
+	--brand-primary-rgb: 53, 132, 228;
 	--brand-secondary: #9141ac;
+	/* Purple 3 */
 	--brand-orange: #ff7800;
+	/* Orange 3 */
 	--brand-green: #33d17a;
+	/* Green 3 */
 	--brand-red: #e01b24;
+	/* Red 3 */
 
 	/* رنگ‌های زمینه */
 	--bg-primary: #ffffff;
+	/* Light 1 */
 	--bg-secondary: #f6f5f4;
+	/* Light 2 */
 	--bg-card: #ffffff;
+	/* Light 1 */
 	--bg-muted: #deddda;
+	/* Light 3 */
 
 	/* رنگ‌های متن */
-	--text-primary: #2e3436;
+	--text-primary: #3d3846;
+	/* Dark 3 */
 	--text-secondary: #5e5c64;
+	/* Dark 2 */
 	--text-muted: #9a9996;
+	/* Light 5 */
 	--text-on-brand: #ffffff;
+	/* Light 1 */
 
 	/* بوردر و سایه */
 	--border-color: #c0bfbc;
+	/* Light 4 */
 	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
 	--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
 	--shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -60,16 +75,24 @@
 
 /* حالت تیره */
 .theme-dark {
-	--bg-primary: #242424;
-	--bg-secondary: #2d2d2d;
-	--bg-card: #383838;
-	--bg-muted: #4a4a4a;
+	--bg-primary: #241f31;
+	/* Dark 4 */
+	--bg-secondary: #3d3846;
+	/* Dark 3 */
+	--bg-card: #5e5c64;
+	/* Dark 2 */
+	--bg-muted: #77767b;
+	/* Dark 1 */
 
 	--text-primary: #ffffff;
+	/* Light 1 */
 	--text-secondary: #c0bfbc;
+	/* Light 4 */
 	--text-muted: #9a9996;
+	/* Light 5 */
 
 	--border-color: #5e5c64;
+	/* Dark 2 */
 	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
 	--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
 	--shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
@@ -98,18 +121,40 @@ body {
 }
 
 /* تایپوگرافی */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: 700;
 	line-height: var(--line-height-tight);
 	margin-bottom: var(--spacing-sm);
 }
 
-h1 { font-size: var(--font-size-4xl); }
-h2 { font-size: var(--font-size-3xl); }
-h3 { font-size: var(--font-size-2xl); }
-h4 { font-size: var(--font-size-xl); }
-h5 { font-size: var(--font-size-lg); }
-h6 { font-size: var(--font-size-base); }
+h1 {
+	font-size: var(--font-size-4xl);
+}
+
+h2 {
+	font-size: var(--font-size-3xl);
+}
+
+h3 {
+	font-size: var(--font-size-2xl);
+}
+
+h4 {
+	font-size: var(--font-size-xl);
+}
+
+h5 {
+	font-size: var(--font-size-lg);
+}
+
+h6 {
+	font-size: var(--font-size-base);
+}
 
 p {
 	margin-bottom: var(--spacing-sm);
@@ -127,7 +172,8 @@ a:hover {
 }
 
 /* لیست‌ها */
-ul, ol {
+ul,
+ol {
 	padding-right: var(--spacing-md);
 	margin-bottom: var(--spacing-sm);
 }
@@ -290,9 +336,17 @@ li {
 	flex-wrap: wrap;
 }
 
-.gap-sm { gap: var(--spacing-sm); }
-.gap-md { gap: var(--spacing-md); }
-.gap-lg { gap: var(--spacing-lg); }
+.gap-sm {
+	gap: var(--spacing-sm);
+}
+
+.gap-md {
+	gap: var(--spacing-md);
+}
+
+.gap-lg {
+	gap: var(--spacing-lg);
+}
 
 /* هدر */
 .header {
@@ -514,7 +568,7 @@ li {
 .search-input:focus {
 	outline: none;
 	border-color: var(--brand-primary);
-	box-shadow: 0 0 0 3px rgba(53, 132, 228, 0.1);
+	box-shadow: 0 0 0 3px rgba(var(--brand-primary-rgb), 0.1);
 }
 
 /* فیلترها */
@@ -641,6 +695,7 @@ li {
 		opacity: 0;
 		transform: translateY(20px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -652,6 +707,7 @@ li {
 		opacity: 0;
 		transform: translateY(40px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -667,7 +723,10 @@ li {
 }
 
 /* کلاس‌های کمکی */
-.hidden { display: none; }
+.hidden {
+	display: none;
+}
+
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -680,21 +739,57 @@ li {
 	border: 0;
 }
 
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center {
+	text-align: center;
+}
 
-.mb-0 { margin-bottom: 0; }
-.mb-sm { margin-bottom: var(--spacing-sm); }
-.mb-md { margin-bottom: var(--spacing-md); }
-.mb-lg { margin-bottom: var(--spacing-lg); }
-.mb-xl { margin-bottom: var(--spacing-xl); }
+.text-left {
+	text-align: left;
+}
 
-.mt-0 { margin-top: 0; }
-.mt-sm { margin-top: var(--spacing-sm); }
-.mt-md { margin-top: var(--spacing-md); }
-.mt-lg { margin-top: var(--spacing-lg); }
-.mt-xl { margin-top: var(--spacing-xl); }
+.text-right {
+	text-align: right;
+}
+
+.mb-0 {
+	margin-bottom: 0;
+}
+
+.mb-sm {
+	margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+	margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+	margin-bottom: var(--spacing-lg);
+}
+
+.mb-xl {
+	margin-bottom: var(--spacing-xl);
+}
+
+.mt-0 {
+	margin-top: 0;
+}
+
+.mt-sm {
+	margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+	margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+	margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+	margin-top: var(--spacing-xl);
+}
 
 /* تبلت */
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -718,41 +813,56 @@ li {
 }
 
 /* منوی مربوط به حالت موبایل در صفحه‌نمایش بزرگ‌تر پنهان می‌شود و فقط در حالت موبایل نمایش داده می‌شه */
-.mobile-menu { display: none; }
-@media (max-width: 768px) { .mobile-menu { display: block; } .mobile-menu-btn { display: inline-block; } }
+.mobile-menu {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.mobile-menu {
+		display: block;
+	}
+
+	.mobile-menu-btn {
+		display: inline-block;
+	}
+}
 
 /* تنظیم جهت pre به چپ به راست */
 pre.astro-code {
-  direction: ltr;
-  text-align: left;
+	direction: ltr;
+	text-align: left;
 }
 
 pre.astro-code .line {
-  direction: ltr;
-  padding-left: 5px;
+	direction: ltr;
+	padding-left: 5px;
 }
 
 /* استایل کلی مقاله‌ها و محدود کردن عرض مطالب و استایل قسمت نویسنده*/
 .post {
-    max-width: 720px;
-    margin: 2rem auto;
-    padding: 1rem;
-    text-align: center;
-  }
-  h1 {
-    margin-bottom: 0.5rem;
-  }
-  .desc {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 1rem;
-  }
-  .meta {
-    font-size: 0.85rem;
-    color: #777;
-    margin-bottom: 1.5rem;
-  }
-  .content {
-    text-align: justify;
-    line-height: 1.7;
-  }
+	max-width: 720px;
+	margin: 2rem auto;
+	padding: 1rem;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 0.5rem;
+}
+
+.desc {
+	font-size: 1.1rem;
+	color: var(--text-secondary);
+	margin-bottom: 1rem;
+}
+
+.meta {
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	margin-bottom: 1.5rem;
+}
+
+.content {
+	text-align: justify;
+	line-height: 1.7;
+}
