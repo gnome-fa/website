@@ -8,7 +8,7 @@ tags: معرفی، گنوم، تاریخچه
 <div style="text-align:center;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/GNOME_Shell.png"
        alt="گنوم شل و برنامه‌های گنوم"
-       style="max-width:850px; height:auto;" />
+       style="max-width:auto; height:auto;" />
 </div>
 
 
