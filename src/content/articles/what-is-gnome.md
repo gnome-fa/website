@@ -11,10 +11,13 @@ tags: معرفی، گنوم، تاریخچه
        style="max-width:650px; height:auto;" />
 </div>
 
+
 <div style="text-align:center;">
-[گنوم شل](https://en.wikipedia.org/wiki/GNOME_Shell) و [گنوم وب](https://en.wikipedia.org/wiki/GNOME_Web)،
-آب‌و‌هوا و [مدیر فایل](https://en.wikipedia.org/wiki/GNOME_Files) در گنوم 48.
+<a href="https://en.wikipedia.org/wiki/GNOME_Shell">گنوم شل</a> و 
+<a href="https://en.wikipedia.org/wiki/GNOME_Web">گنوم وب</a>، آب‌و‌هوا و 
+<a href="https://en.wikipedia.org/wiki/GNOME_Files">مدیر فایل</a> در گنوم 48.
 </div>
+
 
 
 
