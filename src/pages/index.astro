@@ -1,10 +1,17 @@
 ---
 import ArticleCard from "@components/ui/ArticleCard.astro";
+import Talk from "@components/ui/Talk.astro";
+import ContributorCard from "@components/ui/ContributorCard.astro"
 import BaseLayout from "@layouts/BaseLayout.astro";
+
+import talks_data from "@data/talks.json"
+import contributors from "@data/contributors.json"
 
 import { getCollection } from "astro:content";
 
 const recentArticles = (await getCollection("articles")).filter((a) =>!a.data.draft).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
+const recentTalks    = talks_data.sort((a, b) => Date(b.date) - Date(a.date)).slice(0, 3);
+
 const dateOptions = {
   year: "numeric",
   month: "long",
@@ -90,38 +97,7 @@ const dateOptions = {
                 </div>
 
                 <div class="grid grid-auto mt-xl">
-                    <template x-for="contributor in contributors" :key="contributor.id">
-                        <div class="card contributor-card">
-                            <img :src="contributor.avatar || 'assets/img/default-avatar.svg'"
-                                 :alt="contributor.name"
-                                 class="contributor-avatar"
-                                 loading="lazy">
-                            <h3 class="contributor-name" x-text="contributor.name"></h3>
-                            <p class="contributor-role" x-text="contributor.role"></p>
-                            <div class="flex gap-sm mt-md" style="justify-content: center;">
-                                <a x-show="contributor.github"
-                                   :href="contributor.github"
-                                   target="_blank"
-                                   rel="noopener"
-                                   class="btn btn-small btn-secondary"
-                                   title="گیت‌هاب">
-                                    <svg width="16" height="16" fill="currentColor">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                                    </svg>
-                                </a>
-                                <a x-show="contributor.website"
-                                   :href="contributor.website"
-                                   target="_blank"
-                                   rel="noopener"
-                                   class="btn btn-small btn-secondary"
-                                   title="وب‌سایت">
-                                    <svg width="16" height="16" fill="currentColor">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zM5.53 7.5c.1-.24.24-.47.4-.68.22-.27.49-.5.8-.69.15-.09.31-.17.48-.24.23-.1.48-.15.73-.15.4 0 .79.1 1.15.29.18.09.35.21.5.34.08.07.15.15.22.24.14.18.26.38.35.59.05.12.09.25.12.38.02.09.03.18.03.27 0 .16-.03.31-.08.46-.03.08-.06.16-.1.24-.07.14-.16.27-.26.39-.05.06-.1.12-.16.17-.11.1-.23.18-.36.25-.07.04-.14.07-.21.1-.15.06-.31.1-.47.12-.08.01-.16.02-.24.02-.32 0-.63-.08-.91-.23-.14-.08-.27-.17-.39-.28-.06-.05-.12-.11-.17-.17-.1-.12-.18-.25-.25-.39-.04-.08-.07-.16-.09-.25-.03-.12-.04-.24-.04-.36z"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </template>
+                    {contributors.map(contributor => (<ContributorCard key={contributor.id} contributor={contributor} />))}
                 </div>
 
                 <div x-show="loading" class="text-center mt-xl">
@@ -140,37 +116,13 @@ const dateOptions = {
                 </div>
 
                 <div class="grid grid-3 mt-xl">
-                    <template x-for="talk in featuredTalks" :key="talk.id">
-                        <div class="card">
-                            <img :src="talk.thumbnail || 'assets/img/default-talk.jpg'"
-                                 :alt="talk.title"
-                                 style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);"
-                                 loading="lazy">
-                            <div class="article-meta">
-                                <span x-text="talk.speaker"></span>
-                                <span>•</span>
-                                <span x-text="talk.persianDate"></span>
-                            </div>
-                            <h3 class="article-title" x-text="talk.title"></h3>
-                            <p class="article-excerpt" x-text="talk.description"></p>
-                            <div class="flex gap-sm mt-md">
-                                <a x-show="talk.videoUrl"
-                                   :href="talk.videoUrl"
-                                   target="_blank"
-                                   rel="noopener"
-                                   class="btn btn-small btn-primary">
-                                    ویدیو
-                                </a>
-                                <a x-show="talk.slideUrl"
-                                   :href="talk.slideUrl"
-                                   target="_blank"
-                                   rel="noopener"
-                                   class="btn btn-small btn-secondary">
-                                    اسلایدها
-                                </a>
-                            </div>
+                    {recentTalks.length > 0? (
+                        recentTalks.map(talk => (<Talk key={talk.id} talk={talk} />))
+                    ): (
+                        <div x-show="!loading" class="text-center mt-xl">
+                        <p>ارائه‌ای یافت نشد.</p>
                         </div>
-                    </template>
+                    )}
                 </div>
 
                 <div class="text-center mt-xl">
