@@ -1,0 +1,29 @@
+name: Mirror to GitLab
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enable sparse-checkout (exclude .github)
+        run: |
+          git sparse-checkout init --cone
+          git sparse-checkout set ':(exclude).github' .
+
+      - name: Push to GitLab
+        run: |
+          git remote add gitlab https://$GITLAB_USERNAME:$GITLAB_TOKEN@gitlab.gnome.org/Teams/Websites/fa.gnome.org.git
+          git push --mirror gitlab
+        env:
+          GITLAB_USERNAME: ${{ secrets.GITLAB_USERNAME }}
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}

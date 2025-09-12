@@ -22,9 +22,3 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
-# vscode settings folder
-.vscode/
-
-# ignore github workflow
-.github
