@@ -1,54 +1,33 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Talk from "@components/ui/Talk.astro"
+import TalksData from "@data/talks.json"
 ---
 
 <BaseLayout>
-    <main class="container" style="padding-top: var(--spacing-xl);" x-data="alpineData.talksSearch()" x-init="init()">
-        <div class="section-header mb-xl">
-            <h1 class="section-title">ارائه‌ها</h1>
-            <p class="section-subtitle">وبینارها و کارگاه‌های آموزشی گنوم فارسی</p>
-        </div>
+  <main 
+    class="container" 
+    style="padding-top: var(--spacing-xl);" 
+    x-data="{ loading: false }" 
+    x-init="loading = false"
+  >
+    <div class="section-header mb-xl">
+      <h1 class="section-title">ارائه‌ها</h1>
+      <p class="section-subtitle">وبینارها و کارگاه‌های آموزشی گنوم فارسی</p>
+    </div>
 
-        <div class="search-form">
-            <input type="text" class="search-input" placeholder="جستجو در ارائه‌ها..." 
-                   x-model="searchQuery" @input.debounce.300ms="filterTalks()">
-        </div>
+    <div x-show="loading" class="text-center">
+      <p>در حال بارگذاری...</p>
+    </div>
 
-        <div class="filters">
-            <button class="filter-btn" :class="{ active: selectedYear === '' }" @click="selectYear('')">همه سال‌ها</button>
-            <template x-for="year in allYears" :key="year">
-                <button class="filter-btn" :class="{ active: selectedYear === year.toString() }" 
-                        @click="selectYear(year.toString())" x-text="toFarsiNumber(year)"></button>
-            </template>
+    <div class="grid grid-auto" x-show="!loading">
+      {TalksData.length > 0? (
+        TalksData.map(talk => (<Talk key={talk.id} talk={talk} />))
+      ): (
+        <div x-show="!loading" class="text-center mt-xl">
+          <p>ارائه‌ای یافت نشد.</p>
         </div>
-
-        <div x-show="loading" class="text-center">
-            <p>در حال بارگذاری...</p>
-        </div>
-
-        <div class="grid grid-auto" x-show="!loading">
-            <template x-for="talk in visibleTalks" :key="talk.id">
-                <div class="card" x-show="talk.visible">
-                    <img :src="talk.thumbnail || 'assets/img/default-talk.jpg'" 
-                         :alt="talk.title" 
-                         style="width: 100%; height: 200px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: var(--spacing-md);">
-                    <div class="article-meta">
-                        <span x-text="talk.speaker"></span>
-                        <span>•</span>
-                        <span x-text="talk.persianDate"></span>
-                    </div>
-                    <h3 class="article-title" x-text="talk.title"></h3>
-                    <p class="article-excerpt" x-text="talk.description"></p>
-                    <div class="flex gap-sm mt-md">
-                        <a x-show="talk.videoUrl" :href="talk.videoUrl" target="_blank" class="btn btn-small btn-primary">ویدیو</a>
-                        <a x-show="talk.slideUrl" :href="talk.slideUrl" target="_blank" class="btn btn-small btn-secondary">اسلایدها</a>
-                    </div>
-                </div>
-            </template>
-        </div>
-
-        <div x-show="!loading && visibleTalks.length === 0" class="text-center mt-xl">
-            <p>ارائه‌ای یافت نشد.</p>
-        </div>
-    </main>
+      )}
+    </div>
+  </main>
 </BaseLayout>

@@ -1,57 +1,13 @@
 [
   {
-    "id": "gtk4-webinar",
-    "title": "مقدمه‌ای بر GTK4 و قابلیت‌های جدید",
-    "speaker": "علی محمدی",
-    "date": "2024-01-10",
-    "description": "در این وبینار با ویژگی‌های جدید GTK4 و نحوه استفاده از آن‌ها آشنا می‌شویم",
-    "videoUrl": "https://example.com/video1",
+    "id": "tehlug-revisto-1403",
+    "title": "چجوری اپلیکیشینم بخشی از گنوم سرکل شد در تهلاگ",
+    "speaker": "رویستو",
+    "date": "2025-02-27",
+    "description": "ارائه و صحبت من توی رویداد 278 تهلاگ (گروه کاربران گنو/لینوکس تهران)\nدرباره‌ی اپلیکیشنم درام ماشین (Drum Machine) و پروسه‌ی بخشی از گنوم سرکل شدنش حرف زدم.",
+    "videoUrl": "https://www.youtube.com/watch?v=EfaRrPl_V4I",
     "slideUrl": "https://example.com/slides1",
     "tags": ["GTK", "توسعه"],
-    "thumbnail": "assets/img/talk1.jpg"
-  },
-  {
-    "id": "gnome-design-talk",
-    "title": "اصول طراحی در اکوسیستم گنوم",
-    "speaker": "فاطمه کریمی",
-    "date": "2024-01-25",
-    "description": "بررسی اصول طراحی Human Interface Guidelines در گنوم",
-    "videoUrl": "https://example.com/video2",
-    "slideUrl": "https://example.com/slides2",
-    "tags": ["طراحی", "UX"],
-    "thumbnail": "assets/img/talk2.jpg"
-  },
-  {
-    "id": "contributing-workshop",
-    "title": "کارگاه مشارکت در پروژه‌های آزاد",
-    "speaker": "حسین احمدی",
-    "date": "2024-02-08",
-    "description": "آموزش گام‌به‌گام مشارکت در پروژه‌های نرم‌افزار آزاد",
-    "videoUrl": "https://example.com/video3",
-    "slideUrl": "https://example.com/slides3",
-    "tags": ["مشارکت", "Git"],
-    "thumbnail": "assets/img/talk3.jpg"
-  },
-  {
-    "id": "localization-best-practices",
-    "title": "بهترین شیوه‌های محلی‌سازی",
-    "speaker": "سارا نوری",
-    "date": "2024-02-20",
-    "description": "راهکارها و ابزارهای محلی‌سازی نرم‌افزار برای زبان فارسی",
-    "videoUrl": "https://example.com/video4",
-    "slideUrl": "https://example.com/slides4",
-    "tags": ["ترجمه", "محلی‌سازی"],
-    "thumbnail": "assets/img/talk4.jpg"
-  },
-  {
-    "id": "flatpak-packaging",
-    "title": "بسته‌بندی اپلیکیشن‌ها با Flatpak",
-    "speaker": "مهدی رضایی",
-    "date": "2024-03-05",
-    "description": "نحوه ایجاد و توزیع اپلیکیشن‌های گنوم با استفاده از Flatpak",
-    "videoUrl": "https://example.com/video5",
-    "slideUrl": "https://example.com/slides5",
-    "tags": ["Flatpak", "توزیع"],
-    "thumbnail": "assets/img/talk5.jpg"
+    "thumbnail": "assets/img/talks-thlug-revisto.png"
   }
 ]
