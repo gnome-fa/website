@@ -8,11 +8,14 @@ tags: معرفی، گنوم، تاریخچه
 <div style="text-align:center;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/GNOME_Shell.png"
        alt="گنوم شل و برنامه‌های گنوم"
-       style="max-width:auto; height:auto;" />
+       style="max-width:650px; height:auto;" />
 </div>
 
+<div style="text-align:center;">
+[گنوم شل](https://en.wikipedia.org/wiki/GNOME_Shell) و [گنوم وب](https://en.wikipedia.org/wiki/GNOME_Web)،
+آب‌و‌هوا و [مدیر فایل](https://en.wikipedia.org/wiki/GNOME_Files) در گنوم 48.
+</div>
 
-[گنوم شل](https://en.wikipedia.org/wiki/GNOME_Shell) و [گنوم وب](https://en.wikipedia.org/wiki/GNOME_Web)، آب‌و‌هوا و [مدیر فایل](https://en.wikipedia.org/wiki/GNOME_Files) در گنوم 48.
 
 
 گنوم (GNOME) یک محیط دسکتاپ آزاد و متن‌باز است که برای سیستم‌عامل‌های [شبه‌یونیکس](https://blogs.gnome.org/mclasen/2014/02/19/on-portability/) مانند گنو/لینوکس و BSD توسعه یافته است. هدف اصلی گنوم ارائه‌ی یک رابط کاربری گرافیکی ساده، زیبا و کاربرپسند است تا کاربران بتوانند بدون نیاز به دستورات پیچیده‌ی خط فرمان، از امکانات سیستم بهره ببرند. همچنین این محیط, پیشفرض بسیاری از توزیع‌های لینوکس همانند [دبیان](https://en.wikipedia.org/wiki/Debian), [فدورا](https://en.wikipedia.org/wiki/Fedora_Linux), [اوبنتو](https://en.wikipedia.org/wiki/Ubuntu) و... است.
