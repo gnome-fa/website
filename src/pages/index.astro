@@ -1,5 +1,15 @@
 ---
+import ArticleCard from "@components/ui/ArticleCard.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
+
+import { getCollection } from "astro:content";
+
+const recentArticles = (await getCollection("articles")).filter((a) =>!a.data.draft).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
+const dateOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
 ---
 
 <BaseLayout>
@@ -178,24 +188,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
                 </div>
 
                 <div class="grid grid-3 mt-xl">
-                    <template x-for="article in recentArticles" :key="article.slug">
-                        <div class="card article-card">
-                            <div class="article-meta">
-                                <span x-text="article.author"></span>
-                                <span>•</span>
-                                <span x-text="article.persianDate"></span>
-                            </div>
-                            <h3 class="article-title">
-                                <a :href="getArticleUrl(article.slug)" x-text="article.title"></a>
-                            </h3>
-                            <p class="article-excerpt" x-text="article.excerpt"></p>
-                            <div class="article-tags" x-show="article.tags">
-                                <template x-for="tag in article.tags" :key="tag">
-                                    <span class="tag" x-text="tag"></span>
-                                </template>
-                            </div>
-                        </div>
-                    </template>
+                    {recentArticles.map(article => (<ArticleCard key={article.slug} article={article} dateOptions={dateOptions} />))}
                 </div>
 
                 <div class="text-center mt-xl">
