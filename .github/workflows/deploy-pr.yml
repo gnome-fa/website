@@ -1,4 +1,4 @@
-name: Deploy site
+name: Deploy PR Preview
 
 on:
   pull_request:
@@ -28,3 +28,4 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: ./public
+          token: ${ { secrets.PR_PREVIEW_TOKEN } }
