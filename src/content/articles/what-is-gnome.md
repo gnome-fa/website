@@ -5,10 +5,12 @@ date: 2025-09-12
 tags: معرفی، گنوم، تاریخچه
 ---
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/97/GNOME_Shell.png"
-     alt="گنوم شل و برنامه‌های گنوم"
-     width="850"
-     height="650" />
+<div style="text-align:center;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/GNOME_Shell.png"
+       alt="گنوم شل و برنامه‌های گنوم"
+       style="max-width:850px; height:auto;" />
+</div>
+
 
 [گنوم شل](https://en.wikipedia.org/wiki/GNOME_Shell) و [گنوم وب](https://en.wikipedia.org/wiki/GNOME_Web)، آب‌و‌هوا و [مدیر فایل](https://en.wikipedia.org/wiki/GNOME_Files) در گنوم 48.
 
