@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate-articles": "node scripts/generate-articles-index.js",
+    "prebuild": "npm run generate-articles"
   },
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.8",
