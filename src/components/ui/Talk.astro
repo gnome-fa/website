@@ -1,5 +1,12 @@
 ---
 const { talk } = Astro.props;
+
+const dateOptions = {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const date = new Date(talk.date).toLocaleDateString("fa-IR", dateOptions)
 ---
 
 <div class="card">
@@ -17,7 +24,7 @@ const { talk } = Astro.props;
   <div class="article-meta">
     <span>{talk.speaker}</span>
     <span>•</span>
-    <span>{talk.persianDate}</span>
+    <span>{date}</span>
   </div>
   <h3 class="article-title">{talk.title}</h3>
   <p class="article-excerpt">{talk.description}</p>
