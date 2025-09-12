@@ -930,3 +930,24 @@ h1 {
 	text-align: justify;
 	line-height: 1.7;
 }
+
+.content img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: var(--spacing-lg) auto;
+	border-radius: var(--radius-sm);
+	box-shadow: var(--shadow-sm);
+}
+
+.content figure {
+	margin: var(--spacing-lg) 0;
+	text-align: center;
+}
+
+.content figcaption {
+	font-size: var(--font-size-sm);
+	color: var(--text-muted);
+	margin-top: var(--spacing-xs);
+	font-style: italic;
+}
