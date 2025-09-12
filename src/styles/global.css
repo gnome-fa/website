@@ -182,6 +182,70 @@ li {
 	margin-bottom: var(--spacing-xs);
 }
 
+blockquote {
+	margin: var(--spacing-lg) 0;
+	padding: var(--spacing-md) var(--spacing-lg);
+	border-right: 4px solid var(--brand-primary);
+	background-color: var(--bg-secondary);
+	border-radius: var(--radius-sm);
+	position: relative;
+	font-style: italic;
+}
+
+blockquote::before {
+	content: '"';
+	font-size: var(--font-size-4xl);
+	color: var(--brand-primary);
+	position: absolute;
+	top: -0.5rem;
+	right: var(--spacing-sm);
+	font-family: serif;
+	opacity: 0.5;
+}
+
+blockquote p {
+	margin: 0;
+	color: var(--text-secondary);
+	line-height: var(--line-height-relaxed);
+}
+
+blockquote p:not(:last-child) {
+	margin-bottom: var(--spacing-sm);
+}
+
+blockquote code,
+blockquote em,
+blockquote strong {
+	direction: ltr;
+	text-align: left;
+	display: inline-block;
+}
+
+code {
+	background-color: var(--bg-muted);
+	padding: 0.2em 0.4em;
+	border-radius: var(--radius-sm);
+	font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+	font-size: 0.9em;
+	direction: ltr;
+	text-align: left;
+}
+
+pre {
+	background-color: var(--bg-muted);
+	padding: var(--spacing-md);
+	border-radius: var(--radius-sm);
+	overflow-x: auto;
+	margin: var(--spacing-md) 0;
+	direction: ltr;
+	text-align: left;
+}
+
+pre code {
+	background: none;
+	padding: 0;
+}
+
 /* کامپوننت‌ها */
 .container {
 	max-width: 1200px;
