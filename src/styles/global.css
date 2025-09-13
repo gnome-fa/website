@@ -77,7 +77,7 @@
 .theme-dark {
     --bg-primary: #111;
     /* Dark 4 */
-    --bg-secondary: #55505C;
+    --bg-secondary: #241F31;
     /* Dark 3 */
     --bg-card: #3D3846;
     /* Dark 2 */
@@ -311,6 +311,10 @@ pre code {
     border: 1px solid var(--border-color);
 }
 
+.theme-dark .btn-secondary {
+    background: #55505C;
+}
+
 .btn-secondary:hover {
     background: var(--bg-muted);
     color: var(--text-primary);
@@ -440,6 +444,7 @@ pre code {
 .nav-link {
     font-weight: 500;
     padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     transition: background-color 0.2s ease;
 }
@@ -464,13 +469,33 @@ pre code {
     color: var(--text-primary);
 }
 
+.logo-dark {
+    display: inline;
+}
+
+.logo-light {
+    display: none;
+}
+
+.theme-dark .logo-dark {
+    display: none;
+}
+
+.theme-dark .logo-light {
+    display: inline;
+}
+
 /* منوی موبایل */
 .mobile-menu-btn {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-xs);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
     display: none;
     background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--spacing-xs);
 }
 
 .mobile-menu {
@@ -484,9 +509,14 @@ pre code {
 }
 
 .mobile-nav-links {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
     padding: var(--spacing-md);
     gap: var(--spacing-md);
+    margin-bottom: 0;
 }
 
 /* سوئیچ تیره/روشن */
