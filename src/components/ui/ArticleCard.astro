@@ -2,7 +2,7 @@
 const { article, dateOptions } = Astro.props;
 const authors = Array.isArray(article.data.author)? article.data.author: [article.data.author].filter(Boolean);
 ---
-
+<a href={`/articles/${article.slug}`}>
 <div class="card article-card">
   <div class="article-meta">
     {authors.length > 0 && (
@@ -17,8 +17,9 @@ const authors = Array.isArray(article.data.author)? article.data.author: [articl
   </div>
 
   <h2 class="article-title">
-    <a href={`/articles/${article.slug}`}>{article.data.title}</a>
+    <p class="article-title">{article.data.title}</p>
   </h2>
 
   <p class="article-excerpt">{article.data.description}</p>
 </div>
+</a>

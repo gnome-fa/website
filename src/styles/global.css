@@ -89,13 +89,14 @@
     /* Dark 1 */
     --bg-head: #3d3846;
     /* Header */
-
+  
     --text-primary: #ffffff;
     /* Light 1 */
     --text-secondary: #c0bfbc;
     /* Light 4 */
     --text-muted: #9a9996;
     /* Light 5 */
+ 
     --color-link: #ffffff;
     /* Link */
 
@@ -613,6 +614,10 @@ pre code {
     margin-bottom: var(--spacing-sm);
 }
 
+.theme-dark .article-card {
+    color: var(--text-primary);
+}
+
 .article-excerpt {
     color: var(--text-secondary);
     margin-bottom: var(--spacing-md);
@@ -697,6 +702,11 @@ pre code {
 
 .footer-links li {
     margin-bottom: var(--spacing-xs);
+
+}
+
+.theme-dark .footer-links li a {
+    color: var(--text-primary);
 }
 
 .footer-bottom {
