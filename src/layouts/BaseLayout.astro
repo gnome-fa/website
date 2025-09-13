@@ -1,13 +1,14 @@
 ---
 import Header from "@components/page/Header.astro";
 import Footer from "@components/page/Footer.astro";
+import "@styles/inter.css"
 const { pageTitle } = Astro.props;
 const siteTitle = "گنوم فارسی";
 
 import "@styles/global.css";
 ---
 
-<html lang="fa-IR">
+<html lang="fa">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
@@ -23,8 +24,6 @@ import "@styles/global.css";
 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <script src="/assets/js/app.js" defer></script>
-
-        <link rel="stylesheet" href="https://static.gnome.org/css/inter.css">
 
         <title>{pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle}</title>
 
