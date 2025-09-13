@@ -7,7 +7,8 @@
         <nav class="nav">
             <!-- Logo -->
             <a href="/" class="logo" aria-label="گنوم فارسی - خانه">
-                <img src="/assets/img/gnome_brandmark_dark.svg" width="32" height="32" alt="گنوم فارسی لوگو"/>
+                <img src="/assets/img/gnome_brandmark_dark.svg" width="32" height="32" alt="گنوم فارسی لوگو" class="logo-dark"/>
+                <img src="/assets/img/gnome_brandmark_light.svg" width="32" height="32" alt="گنوم فارسی لوگو" class="logo-light"/>
                 <span>گنوم فارسی</span>
             </a>
 
@@ -31,8 +32,8 @@
                 </button>
 
                 <button class="mobile-menu-btn" @click="toggle()">
-                    <svg width="24" height="24" fill="currentColor">
-                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <svg width="24" height="24" fill="var(--text-primary)">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="var(--text-primary)"" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </button>
             </div>
@@ -41,10 +42,10 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu" x-show="open" x-transition @click.away="close()">
             <ul class="mobile-nav-links">
-                <li><a href="/" class="nav-link" @click="close()">خانه</a></li>
-                <li><a href="/articles" class="nav-link" @click="close()">مقالات</a></li>
-                <li><a href="/talks" class="nav-link" @click="close()">ارائه‌ها</a></li>
-                <li><a href="/contribute" class="nav-link" @click="close()">مشارکت</a></li>
+                <li><a href="/" class="nav-link mobile-nav-link" @click="close()">خانه</a></li>
+                <li><a href="/articles" class="nav-link mobile-nav-link" @click="close()">مقالات</a></li>
+                <li><a href="/talks" class="nav-link mobile-nav-link" @click="close()">ارائه‌ها</a></li>
+                <li><a href="/contribute" class="nav-link mobile-nav-link" @click="close()">مشارکت</a></li>
             </ul>
         </div>
         
