@@ -8,29 +8,18 @@ const authors = Array.isArray(author)
 
 const authorLabel = authors.length > 1 ? "نویسندگان" : "نویسنده";
 ---
-
-<html lang="fa">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <main class="post">
-      <h1>{title}</h1>
-      {description && <p class="desc">{description}</p>}
-
-      <div class="meta">
-        {authors.length > 0 && (
-          <span>
-            {" · "}
-            {authorLabel}: {authors.join("، ")}
-          </span>
-        )}
-      </div>
-
-      <article class="content">
-        <slot />
-      </article>
-    </main>
-  </body>
-</html>
+<main class="post">
+  <h1>{title}</h1>
+  {description && <p class="desc">{description}</p>}
+  <div class="meta">
+    {authors.length > 0 && (
+      <span>
+        {" · "}
+        {authorLabel}: {authors.join("، ")}
+      </span>
+    )}
+  </div>
+  <article class="content">
+    <slot />
+  </article>
+</main>
