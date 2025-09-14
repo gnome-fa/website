@@ -55,12 +55,14 @@ const dateOptions = {
           {articles.map(article => (<ArticleCard key={article.slug} article={article} dateOptions={dateOptions} />))}
         </div>
 
-        <!-- No Results -->
-        <div x-show="!loading && visibleArticles.length === 0" class="text-center mt-xl">
-            <p>مقاله‌ای یافت نشد.</p>
-            <button @click="searchQuery = ''; selectedTag = ''; filterArticles()" class="btn btn-secondary mt-md">
-                پاک کردن فیلترها
-            </button>
-        </div>
+        <!-- No Results (SSR) -->
+        {articles.length === 0 && (
+            <div class="text-center mt-xl">
+                <p>مقاله‌ای یافت نشد.</p>
+                <button @click="searchQuery = ''; selectedTag = ''; filterArticles()" class="btn btn-secondary mt-md">
+                    پاک کردن فیلترها
+                </button>
+            </div>
+        )}
     </main>
 </BaseLayout>

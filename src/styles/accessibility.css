@@ -1,0 +1,61 @@
+/* Accessibility Features */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--brand-primary);
+    color: var(--text-on-brand);
+    padding: 8px;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .header,
+    .nav-link,
+    .logo,
+    .theme-toggle,
+    .mobile-menu-btn {
+        transition: none;
+    }
+    
+    .nav-link:hover,
+    .logo:hover,
+    .theme-toggle:hover,
+    .mobile-menu-btn:hover {
+        transform: none;
+    }
+}
+
+@media (forced-colors: active) {
+    .nav-link {
+        border: 1px solid var(--text-primary);
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: var(--text-primary);
+        color: var(--bg-primary);
+    }
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

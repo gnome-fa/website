@@ -35,6 +35,35 @@ window.alpineData = {
       }
     };
   },
+  
+  // Homepage state (placeholder to avoid runtime errors)
+  homepage() {
+    return {
+      loading: false,
+      init() {
+        this.loading = false;
+      }
+    };
+  },
+  
+  // Articles page state (basic scaffold for future filters/search)
+  articlesSearch() {
+    return {
+      loading: false,
+      searchQuery: '',
+      selectedTag: '',
+      visibleArticles: [],
+      init() {
+        this.loading = false;
+      },
+      selectTag(tag) {
+        this.selectedTag = tag;
+      },
+      filterArticles() {
+        // SSR renders the list; this is a placeholder for client filtering
+      }
+    };
+  },
 };
 
 // Basic settings
@@ -72,4 +101,24 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.card, .section').forEach(el => {
     observer.observe(el);
   });
+  
+  // Active link highlighting (Was separate idk why)
+  try {
+    const rawPath = location.pathname || '/';
+    const path = rawPath.replace(/\/+$/g, '') || '/';
+    const links = document.querySelectorAll('.nav-links .nav-link, .mobile-nav-links .nav-link');
+    links.forEach(anchor => {
+      const href = anchor.getAttribute('href') || '';
+      let target = href;
+      if (href === '#' || href === '#home') target = '/';
+      if (target.startsWith('/')) target = (target.replace(/\/+$/, '') || '/');
+      if (target === '/') {
+        if (path === '/') anchor.classList.add('active'); else anchor.classList.remove('active');
+      } else {
+        if (path === target || path.startsWith(target + '/')) anchor.classList.add('active'); else anchor.classList.remove('active');
+      }
+    });
+  } catch (_) {
+
+  }
 });

@@ -1,0 +1,117 @@
+:root {
+    /* GNOME Theme Variables */
+    --gnome-toolbar-padding: 6px;
+    --gnome-toolbar-spacing: 6px;
+    --gnome-button-radius: 9px;
+    --gnome-button-size: 34px;
+    --gnome-entry-radius: var(--gnome-button-radius);
+    --gnome-entry-height: var(--gnome-button-size);
+    --gnome-card-radius: 12px;
+    --gnome-menu-radius: 9px;
+    --gnome-menu-padding: 6px;
+    --gnome-animation-time: 300ms;
+
+    /* GNOME Palette */
+    --gnome-palette-blue-3: #3584e4;
+    --gnome-palette-purple-3: #9141ac;
+    --gnome-palette-orange-3: #ff7800;
+    --gnome-palette-green-3: #33d17a;
+    --gnome-palette-red-3: #e01b24;
+
+    --gnome-palette-light-1: #ffffff;
+    --gnome-palette-light-2: #f6f5f4;
+    --gnome-palette-light-3: #deddda;
+    --gnome-palette-light-4: #c0bfbc;
+    --gnome-palette-light-5: #9a9996;
+
+    --gnome-palette-dark-1: #77767b;
+    --gnome-palette-dark-2: #5e5c64;
+    --gnome-palette-dark-3: #3d3846;
+    --gnome-palette-dark-4: #241f31;
+
+    /* GNOME Semantic Colors */
+    --gnome-accent-bg: var(--gnome-palette-blue-3);
+    --gnome-destructive-bg: var(--gnome-palette-red-3);
+    --gnome-menu-shadow: 0 1px 5px 1px rgba(0, 0, 0, .09), 0 2px 14px 3px rgba(0, 0, 0, .05);
+
+    /* Brand Colors */
+    --brand-primary: var(--gnome-palette-blue-3);
+    --brand-primary-rgb: 53, 132, 228;
+    --brand-secondary: var(--gnome-palette-purple-3);
+    --brand-orange: var(--gnome-palette-orange-3);
+    --brand-green: var(--gnome-palette-green-3);
+    --brand-red: var(--gnome-palette-red-3);
+
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-head: #ededed;
+    --bg-secondary: var(--gnome-palette-light-2);
+    --bg-card: var(--gnome-palette-light-1);
+    --bg-muted: var(--gnome-palette-light-3);
+
+    /* Text Colors */
+    --text-primary: var(--gnome-palette-dark-3);
+    --text-secondary: var(--gnome-palette-dark-2);
+    --text-muted: var(--gnome-palette-light-5);
+    --text-on-brand: var(--gnome-palette-light-1);
+    --color-link: #555561;
+
+    /* Borders and Shadows */
+    --border-color: var(--gnome-palette-light-4);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+    /* Border Radius */
+    --radius-sm: var(--gnome-button-radius);
+    --radius-md: var(--gnome-card-radius);
+    --radius-lg: 24px;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    /* Typography */
+    --font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+
+    /* Line Height for Persian */
+    --line-height-tight: 1.4;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
+
+    /* GNOME Button Colors */
+    --gnome-button-background: color-mix(in srgb, currentColor 10%, transparent);
+    --gnome-button-hover-background: color-mix(in srgb, currentColor 15%, transparent);
+    --gnome-button-active-background: color-mix(in srgb, currentColor 30%, transparent);
+}
+
+/* Dark Theme */
+.theme-dark {
+    --bg-primary: var(--gnome-palette-dark-4);
+    --bg-secondary: var(--gnome-palette-dark-3);
+    --bg-card: #302942;
+    --bg-muted: var(--gnome-palette-dark-1);
+    --bg-head: var(--gnome-palette-dark-3);
+    
+    --text-primary: var(--gnome-palette-light-1);
+    --text-secondary: var(--gnome-palette-light-4);
+    --text-muted: var(--gnome-palette-light-5);
+    --color-link: var(--gnome-palette-light-1);
+
+    --border-color: var(--gnome-palette-dark-2);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.4);
+}

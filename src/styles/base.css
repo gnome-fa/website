@@ -1,0 +1,190 @@
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+/* Inter Font */
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://static.gnome.org/fonts/InterVariable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://static.gnome.org/fonts/InterVariable-Italic.woff2") format("woff2");
+}
+
+@font-feature-values InterVariable {
+    @character-variant {
+        cv01: 1; cv02: 2; cv03: 3; cv04: 4; cv05: 5; cv06: 6; cv07: 7; cv08: 8;
+        cv09: 9; cv10: 10; cv11: 11; cv12: 12; cv13: 13;
+        alt-1:            1; /* Alternate one */
+        alt-3:            9; /* Flat-top three */
+        open-4:           2; /* Open four */
+        open-6:           3; /* Open six */
+        open-9:           4; /* Open nine */
+        lc-l-with-tail:   5; /* Lower-case L with tail */
+        simplified-u:     6; /* Simplified u */
+        alt-double-s:     7; /* Alternate German double s */
+        uc-i-with-serif:  8; /* Upper-case i with serif */
+        uc-g-with-spur:  10; /* Capital G with spur */
+        single-story-a:  11; /* Single-story a */
+        compact-lc-f:    12; /* Compact f */
+        compact-lc-t:    13; /* Compact t */
+    }
+    @styleset {
+        ss01: 1; ss02: 2; ss03: 3; ss04: 4; ss05: 5; ss06: 6; ss07: 7; ss08: 8;
+        open-digits: 1;                /* Open digits */
+        disambiguation: 2;             /* Disambiguation (with zero) */
+        disambiguation-except-zero: 4; /* Disambiguation (no zero) */
+        round-quotes-and-commas: 3;    /* Round quotes &amp; commas */
+        square-punctuation: 7;         /* Square punctuation */
+        square-quotes: 8;              /* Square quotes */
+        circled-characters: 5;         /* Circled characters */
+        squared-characters: 6;         /* Squared characters */
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+:root {
+    direction: rtl;
+}
+
+body {
+    font-family: var(--font-family), serif;
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    text-align: right;
+    overflow-x: hidden;
+    font-feature-settings: 'liga' 1, 'calt' 1, 'cv05' 1; /* Inter features */
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: var(--font-size-4xl); }
+h2 { font-size: var(--font-size-3xl); }
+h3 { font-size: var(--font-size-2xl); }
+h4 { font-size: var(--font-size-xl); }
+h5 { font-size: var(--font-size-lg); }
+h6 { font-size: var(--font-size-base); }
+
+p {
+    margin-bottom: var(--spacing-sm);
+    line-height: var(--line-height-relaxed);
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--brand-secondary);
+}
+
+/* Lists */
+ul, ol {
+    padding-right: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+li {
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Blockquote */
+blockquote {
+    margin: var(--spacing-lg) 0;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-right: 4px solid var(--brand-primary);
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    position: relative;
+    font-style: italic;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: var(--font-size-4xl);
+    color: var(--brand-primary);
+    position: absolute;
+    top: -0.5rem;
+    right: var(--spacing-sm);
+    font-family: serif;
+    opacity: 0.5;
+}
+
+blockquote p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: var(--line-height-relaxed);
+}
+
+blockquote p:not(:last-child) {
+    margin-bottom: var(--spacing-sm);
+}
+
+blockquote code,
+blockquote em,
+blockquote strong {
+    direction: ltr;
+    text-align: left;
+    display: inline-block;
+}
+
+/* Code */
+code {
+    background-color: var(--bg-muted);
+    padding: 0.2em 0.4em;
+    border-radius: var(--radius-sm);
+    font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+    font-size: 0.9em;
+    direction: ltr;
+    text-align: left;
+}
+
+pre {
+    background-color: var(--bg-muted);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    margin: var(--spacing-md) 0;
+    direction: ltr;
+    text-align: left;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+pre.astro-code {
+    direction: ltr;
+    text-align: left;
+}
+
+pre.astro-code .line {
+    direction: ltr;
+    padding-left: 5px;
+}

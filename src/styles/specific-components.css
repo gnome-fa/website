@@ -1,0 +1,120 @@
+.contributor-card {
+    text-align: center;
+}
+
+.contributor-card .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-xs);
+}
+
+.contributor-card .btn-small {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    font-size: var(--font-size-xs);
+    min-height: 36px;
+    gap: 6px;
+    border-radius: 8px;
+    min-width: 80px;
+    max-width: 120px;
+}
+
+.contributor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto var(--spacing-md) auto;
+    object-fit: cover;
+    border: 3px solid var(--border-color);
+}
+
+.contributor-name {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contributor-role {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+}
+
+.article-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+}
+
+.theme-dark .article-card {
+    color: var(--text-primary);
+}
+
+.article-excerpt {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.article-tags {
+    margin-top: auto;
+}
+
+/* Post Styles */
+.post {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.desc {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.content {
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.content img {
+    max-width: 100% !important;
+    height: auto;
+    display: block;
+    margin: var(--spacing-lg) auto;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.content figure {
+    margin: var(--spacing-lg) 0;
+    text-align: center;
+}
+
+.content figcaption {
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    margin-top: var(--spacing-xs);
+    font-style: italic;
+}
