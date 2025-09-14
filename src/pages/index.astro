@@ -88,25 +88,6 @@ const dateOptions = {
             </div>
         </section>
 
-        <!-- Contributors Section -->
-        <section class="section" style="background: var(--bg-secondary);">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">مشارکت‌کنندگان</h2>
-                    <p class="section-subtitle">افرادی که این پروژه را ممکن کرده‌اند</p>
-                </div>
-
-                <div class="grid grid-auto mt-xl">
-                    {contributors.map(contributor => (<ContributorCard key={contributor.id} contributor={contributor} />))}
-                </div>
-
-                <div x-show="loading" class="text-center mt-xl">
-                    <div class="loading-spinner"></div>
-                    <p>در حال بارگذاری...</p>
-                </div>
-            </div>
-        </section>
-
         <!-- Featured Talks Section -->
         <section class="section">
             <div class="container">
@@ -145,6 +126,25 @@ const dateOptions = {
 
                 <div class="text-center mt-xl">
                     <a href="articles" class="btn btn-outline">همه مقالات</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contributors Section -->
+        <section class="section" style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">مشارکت‌کنندگان</h2>
+                    <p class="section-subtitle">افرادی که این پروژه را ممکن کرده‌اند</p>
+                </div>
+
+                <div class="grid grid-auto mt-xl">
+                    {contributors.map(contributor => (<ContributorCard key={contributor.id} contributor={contributor} />))}
+                </div>
+
+                <div x-show="loading" class="text-center mt-xl">
+                    <div class="loading-spinner"></div>
+                    <p>در حال بارگذاری...</p>
                 </div>
             </div>
         </section>
