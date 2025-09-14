@@ -554,13 +554,13 @@ pre code {
 .hero {
     padding: var(--spacing-2xl) 0;
     text-align: center;
-    background: var(--gr-hero);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
 }
 
 .hero-title {
     font-size: var(--font-size-4xl);
     margin-bottom: var(--spacing-md);
-    background: linear-gradient(135deg, #241F31FF, var(--brand-secondary));
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
