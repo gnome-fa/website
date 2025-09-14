@@ -16,7 +16,7 @@ window.alpineData = {
   // Dark/light mode switch
   themeToggle() {
     return {
-      isDark: localStorage.getItem('theme') === 'dark',
+      isDark: (localStorage.getItem('theme') !== null) ? (localStorage.getItem('theme') === 'dark') : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches),
       init() {
         this.updateTheme();
       },
