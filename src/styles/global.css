@@ -28,10 +28,6 @@
     --bg-muted: #deddda;
     /* Light 3 */
 
-    /* Gradient color */
-    --gr-hero:linear-gradient(135deg,var(--bg-muted) 0%, var(--bg-primary) 35%, var(--bg-primary) 65%, var(--bg-muted) 100%);
-    --gr-head:linear-gradient(180deg,var(--bg-muted) 0%, var(--bg-primary) 35%, var(--bg-primary) 65%, var(--bg-muted) 100%);
-
     /* رنگ‌های متن */
     --text-primary: #3d3846;
     /* Dark 3 */
@@ -91,13 +87,8 @@
     /* Dark 2 */
     --bg-muted: #77767b;
     /* Dark 1 */
-    --bg-head: #3d3846;
+    --bg-head: linear-gradient(180deg,var(--bg-primary) 0%, var(--bg-primary) 97%, var(--brand-secondary) 100%);
     /* Header */
-
-    /* Gradient */
-    --gr-hero:linear-gradient(135deg,var(--brand-secondary) 0%, var(--bg-primary) 25%, var(--bg-primary) 75%, var(--brand-secondary) 100%);
-    /*--gr-head:var(--bg-primary);*/
-    --gr-head: linear-gradient(180deg,var(--bg-primary) 0%, var(--bg-primary) 97%, var(--brand-secondary) 100%);
 
     --text-primary: #ffffff;
     /* Light 1 */
@@ -278,7 +269,7 @@ pre code {
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-md);
     padding: var(--spacing-lg);
-    border: 1px solid var(--gr-head);
+    border: 1px solid var(--bg-head);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
@@ -437,12 +428,14 @@ pre code {
 
 /* هدر */
 .header {
-    background: var(--gr-head);
-    /*border-bottom: 1px solid var(--border-color);*/
+    background: var(--bg-head);
     position: sticky;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
+}
+.theme-dark .header{
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav {
@@ -518,7 +511,7 @@ pre code {
     top: 100%;
     right: 0;
     left: 0;
-    background: var(--gr-head);
+    background: var(--bg-head);
     box-shadow: var(--shadow-lg);
 }
 
