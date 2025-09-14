@@ -5,11 +5,7 @@ date: 2025-09-14
 tags: افزونه، گنوم
 ---
 
-<div style="text-align:center;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Screenshot_of_GNOME_40_taken_on_Manjaro.png"
-       alt="گنوم شل و برنامه‌های گنوم"
-       style="max-width:100%; width:auto; height:auto; max-width:650px;" />
-</div>
+![](/assets/img/how-to-write-extensions.png)
 
 گنوم شل با استفاده از جاوااسکریپت و [Gjs](https://gjs.guide/) بستری قدرتمند برای اسکریپت‌نویسی و ساخت افزونه فراهم کرده است. خوشبختانه فرآیند توسعه افزونه‌ها ساده است و پیچیدگی خاصی ندارد. تقریباً تمام افزونه‌های گنوم توسط جامعه کاربری توسعه داده شده‌اند و کاملاً متن‌باز هستند. این یعنی شما می‌توانید کد افزونه‌های دیگر را مطالعه کرده، ایده بگیرید و حتی از قطعات کد آن‌ها در پروژه‌های خود استفاده کنید.
 
