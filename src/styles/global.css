@@ -127,6 +127,7 @@ body {
     background-color: var(--bg-primary);
     direction: rtl;
     text-align: right;
+    overflow-x: hidden;
 }
 
 /* تایپوگرافی */
@@ -983,7 +984,7 @@ h1 {
 }
 
 .content img {
-    max-width: 100%;
+    max-width: 100% !important;
     height: auto;
     display: block;
     margin: var(--spacing-lg) auto;
