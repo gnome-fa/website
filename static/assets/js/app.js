@@ -1,6 +1,6 @@
 // Alpine.js data objects
 window.alpineData = {
-  // منوی موبایل
+  // Mobile menu
   mobileMenu() {
     return {
       open: false,
@@ -13,7 +13,7 @@ window.alpineData = {
     };
   },
   
-  // سوئیچ تیره/روشن
+  // Dark/light mode switch
   themeToggle() {
     return {
       isDark: localStorage.getItem('theme') === 'dark',
@@ -37,9 +37,9 @@ window.alpineData = {
   },
 };
 
-// تنظیمات اولیه
+// Basic settings
 document.addEventListener('DOMContentLoaded', function() {
-  // اسکرول نرم
+  // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // انیمیشن ورود المان‌ها
+  // Element entrance animations
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, observerOptions);
   
-  // مشاهده کارت‌ها و بخش‌ها برای انیمیشن
+  // Observe cards and sections for animations
   document.querySelectorAll('.card, .section').forEach(el => {
     observer.observe(el);
   });
