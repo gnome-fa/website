@@ -1,3 +1,4 @@
+<div align="center">
 # Persian GNOME community
 
 ![Banner](assets/banner.png)
@@ -6,7 +7,7 @@
 [persian-gnome-url]: https://gnome_fa.t.me/
 
 [![Persian GNOME][persian-gnome-badge]][persian-gnome-url]
-
+</div>
 This repository contains the source code for https://fa.gnome.org
 To contact the Persian GNOME members, reach us at #gnome-fa:gnome.org or t.me/gnome_fa.
 
