@@ -20,6 +20,7 @@
     --bg-primary: #ffffff;
     /* Header */
     --bg-head: #ededed;
+    --bg-head-link: #d6d4d4;
     /* Light 1 */
     --bg-secondary: #f6f5f4;
     /* Light 2 */
@@ -88,6 +89,7 @@
     --bg-muted: #77767b;
     /* Dark 1 */
     --bg-head: linear-gradient(180deg,var(--bg-primary) 0%, var(--bg-primary) 97%, var(--brand-secondary) 100%);
+    --bg-head-link: #3d3846;
     /* Header */
 
     --text-primary: #ffffff;
@@ -433,9 +435,10 @@ pre code {
     top: 0;
     z-index: 100;
     backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
 }
 .theme-dark .header{
-    border-bottom: 1px solid var(--border-color);
+    border:none;
 }
 
 .nav {
@@ -463,7 +466,7 @@ pre code {
 
 .nav-link:hover,
 .nav-link.active {
-    background: var(--bg-head);
+    background: var(--bg-head-link);
     color: var(--brand-secondary);
 }
 
