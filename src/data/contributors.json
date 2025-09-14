@@ -30,5 +30,12 @@
     "avatar": "/assets/img/avatars/danial.png",
     "github": "https://gitlab.gnome.org/danialbehzadi",
     "website": "https://gnu.rocks/"
+  },
+  {
+    "id": "sepehrrs",
+    "name": "سپهر",
+    "role": "توسعه‌دهنده",
+    "avatar": "/assets/img/avatars/sepehr.png",
+    "github": "https://github.com/sepehr-rs"
   }
 ]
