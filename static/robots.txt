@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fa.gnome.org/sitemap-index.xml
