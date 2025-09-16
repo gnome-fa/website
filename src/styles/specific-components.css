@@ -1,5 +1,6 @@
 .contributor-card {
     text-align: center;
+    padding: 15px 32px 15px 32px;
 }
 
 .contributor-card .flex {
@@ -23,7 +24,6 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    margin: 0 auto var(--spacing-md) auto;
     object-fit: cover;
     border: 3px solid var(--border-color);
 }
