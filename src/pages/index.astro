@@ -1,13 +1,12 @@
 ---
 import ArticleCard from "@components/ui/ArticleCard.astro";
 import Talk from "@components/ui/Talk.astro";
-import ContributorCard from "@components/ui/ContributorCard.astro"
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 import talks_data from "@data/talks.json"
-import contributors from "@data/contributors.json"
 
 import { getCollection } from "astro:content";
+import Contributors from "../components/ui/Contributors.astro";
 
 const recentArticles = (await getCollection("articles")).filter((a) =>!a.data.draft).sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 3);
 const recentTalks    = talks_data.sort((a, b) => Date(b.date) - Date(a.date)).slice(0, 3);
@@ -138,8 +137,8 @@ const dateOptions = {
                     <p class="section-subtitle">افرادی که این پروژه را ممکن کرده‌اند</p>
                 </div>
 
-                <div class="grid grid-auto mt-xl">
-                    {contributors.map(contributor => (<ContributorCard key={contributor.id} contributor={contributor} />))}
+                <div class="mt-xl">
+                    <Contributors />
                 </div>
 
                 <div x-show="loading" class="text-center mt-xl">
