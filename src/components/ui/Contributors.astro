@@ -1,0 +1,56 @@
+---
+import {Swiper, SwiperWrapper, SwiperSlide, SwiperButtonPrev, SwiperButtonNext, SwiperPagination} from "astro-swiper";
+import ContributorCard from "@components/ui/ContributorCard.astro"
+import contributors from "@data/contributors.json"
+---
+<Swiper
+        options={{
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                599: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                790: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                870: {
+                    slidesPerView: 3,
+                    spaceBetween: 40
+                }
+            }
+        }}>
+    <SwiperWrapper>
+        {contributors.map(contributor => (
+                <SwiperSlide>
+                    <ContributorCard key={contributor.id} contributor={contributor}/>
+                </SwiperSlide>))}
+    </SwiperWrapper>
+    <SwiperButtonPrev/>
+    <SwiperButtonNext/>
+    <SwiperPagination/>
+</Swiper>
+
+<style>
+    .swiper {
+        max-width: 100%;
+    }
+</style>
