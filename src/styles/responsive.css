@@ -4,7 +4,7 @@
     .nav-links {
         gap: var(--spacing-sm);
     }
-    
+
     .nav-link {
         padding: 8px 16px;
     }
@@ -18,11 +18,11 @@
     .hero-title {
         font-size: var(--font-size-4xl);
     }
-    
+
     .nav-links {
         gap: var(--spacing-xs);
     }
-    
+
     .nav-link {
         padding: 6px 12px;
     }
@@ -81,13 +81,13 @@
     .card {
         padding: var(--spacing-md);
     }
-    
+
     .contributor-card .flex {
         flex-direction: row;
         flex-wrap: wrap;
         gap: var(--spacing-sm);
     }
-    
+
     .contributor-card .btn-small {
         flex: 0 0 auto;
         min-width: 100px;
@@ -95,7 +95,7 @@
         margin: 0;
         padding: 8px 16px;
     }
-    
+
     .mobile-nav-links {
         padding: var(--spacing-sm);
         gap: 16px;
@@ -106,47 +106,47 @@
     .container {
         padding: 0 var(--spacing-xs);
     }
-    
+
     .nav {
         min-height: 52px;
     }
-    
+
     .logo {
         gap: 6px;
     }
-    
+
     .theme-toggle,
     .mobile-menu-btn {
         min-width: 36px;
         min-height: 36px;
         padding: 6px;
     }
-    
+
     .btn {
         padding: 10px 20px;
         min-height: 44px;
         font-size: var(--font-size-sm);
     }
-    
+
     .btn-large {
         padding: 14px 28px;
         min-height: 52px;
         font-size: var(--font-size-base);
     }
-    
+
     .card .btn {
-        min-width: 160px;
+        min-width: 130px;
     }
-    
+
     .card .btn-large {
         min-width: 180px;
     }
-    
+
     .contributor-card .flex {
         flex-direction: column;
         gap: var(--spacing-xs);
     }
-    
+
     .contributor-card .btn-small {
         padding: 10px 20px;
         font-size: var(--font-size-sm);

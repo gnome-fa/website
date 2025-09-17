@@ -95,7 +95,7 @@ const dateOptions = {
                     <p class="section-subtitle">آخرین وبینارها و کارگاه‌های آموزشی</p>
                 </div>
 
-                <div class="grid grid-3 mt-xl">
+                <div class="grid grid-auto mt-xl">
                     {recentTalks.length > 0? (
                         recentTalks.map(talk => (<Talk key={talk.id} talk={talk} />))
                     ): (
