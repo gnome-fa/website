@@ -32,15 +32,22 @@
                 </button>
 
                 <button class="mobile-menu-btn" @click="toggle()">
-                    <svg width="24" height="24" fill="var(--text-primary)">
-                        <path d="M3 12h18M3 6h18M3 18h18" stroke="var(--text-primary)"" stroke-width="2" stroke-linecap="round"/>
+                    <svg width="24" height="24" fill="var(--text-primary)" id="mobile-menu-svg">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="var(--text-primary)" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </button>
             </div>
         </nav>
 
         <!-- Mobile Menu -->
-        <div class="mobile-menu" x-show="open" x-transition @click.away="close()">
+        <div class="mobile-menu" x-show="open"
+             x-transition:enter="transition"
+             x-transition:enter-start="translate-x-full"
+             x-transition:enter-end="translate-x-0"
+             x-transition:leave="transition"
+             x-transition:leave-start="translate-x-0"
+             x-transition:leave-end="translate-x-full"
+             @click.away="close()">
             <ul class="mobile-nav-links">
                 <li><a href="/" class="nav-link mobile-nav-link" @click="close()">خانه</a></li>
                 <li><a href="/articles" class="nav-link mobile-nav-link" @click="close()">مقالات</a></li>

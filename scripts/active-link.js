@@ -20,3 +20,7 @@
         // fail silently
     }
 })();
+
+// For menu-btn XD
+document.getElementById("mobile-menu-svg")
+    .addEventListener("click",ev=>ev.currentTarget.classList.toggle("rotate"))
