@@ -37,5 +37,12 @@
     "role": "توسعه‌دهنده",
     "avatar": "/assets/img/avatars/sepehr.png",
     "github": "https://github.com/sepehr-rs"
-  }
+  },{
+  "id": "VC365",
+  "name": "VC365",
+  "role": "مشارکت‌کننده",
+  "avatar": "/assets/img/avatars/VC365.jpeg",
+  "github": "https://github.com/VC365",
+  "website": "https://VC-365.ir"
+}
 ]
