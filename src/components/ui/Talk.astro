@@ -28,7 +28,7 @@ const date = new Date(talk.date).toLocaleDateString("fa-IR", dateOptions)
   </div>
   <h3 class="article-title">{talk.title}</h3>
   <p class="article-excerpt">{talk.description}</p>
-  <div class="flex gap-sm mt-md">
+  <div class="flex mt-md" style="justify-content: space-between">
     {talk.videoUrl && (
       <a href={talk.videoUrl} target="_blank" class="btn btn-small btn-primary">ویدیو</a>
     )}

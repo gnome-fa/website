@@ -197,20 +197,23 @@
 
 .mobile-menu-btn:hover {
     background-color: var(--gnome-button-hover-background);
-    transform: translateY(-1px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-menu-btn:focus {
-    outline: 2px solid var(--brand-primary);
-    outline-offset: 2px;
+[id="mobile-menu-svg"]{
+    transition: transform 0.6s ease;
+}
+
+[id="mobile-menu-svg"].rotate{
+    transform: rotate(360deg);
 }
 
 .mobile-menu {
-    position: absolute;
+    position: fixed;
     top: 100%;
-    right: 0;
     left: 0;
+    width: 80%;
+    height: 100vh;
     background: color-mix(in srgb, var(--bg-head) 98%, transparent);
     border-bottom: 1px solid var(--border-color);
     box-shadow: var(--gnome-menu-shadow);
@@ -221,11 +224,13 @@
     z-index: 50;
     display: none;
 }
+.mobile-menu.translate-x-full { transform: translateX(-100%); }
+.mobile-menu.translate-x-0 { transform: translateX(0); }
+.mobile-menu.transition { transition: transform 0.5s ease; }
 
 .mobile-nav-links {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     list-style: none;
     padding: var(--spacing-md);
@@ -234,6 +239,7 @@
 }
 
 .mobile-nav-links .nav-link {
+    display: block;
     width: 100%;
     text-align: center;
     padding: 12px 16px;
