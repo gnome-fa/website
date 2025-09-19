@@ -4,9 +4,11 @@
 
 [persian-gnome-badge]: https://gnome-fa.github.io/assets/badges/persian-gnome.svg
 [persian-gnome-url]: https://gnome_fa.t.me/
-
+<div align="center">
+  
 [![Persian GNOME][persian-gnome-badge]][persian-gnome-url]
 
+</div>
 This repository contains the source code for https://fa.gnome.org
 To contact the Persian GNOME members, reach us at #gnome-fa:gnome.org or t.me/gnome_fa.
 
