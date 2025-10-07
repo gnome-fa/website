@@ -26,6 +26,13 @@
     .nav-link {
         padding: 6px 12px;
     }
+
+    .contribution-guide {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -99,6 +106,13 @@
     .mobile-nav-links {
         padding: var(--spacing-sm);
         gap: 16px;
+    }
+
+    .contribution-guide {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
     }
 }
 
