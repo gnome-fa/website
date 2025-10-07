@@ -20,7 +20,7 @@
     min-width: 80px;
     max-width: 120px;
 }
-.contributor-card.fade-in{
+.contributor-card.fade-in {
     animation: none;
 }
 
@@ -121,4 +121,12 @@
     color: var(--text-muted);
     margin-top: var(--spacing-xs);
     font-style: italic;
+}
+
+.contribution-guide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-lg);
 }
