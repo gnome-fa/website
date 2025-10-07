@@ -1,0 +1,33 @@
+---
+const { title, description, img ,link } = Astro.props;
+
+---
+
+<div class="card card-large contribution-guide" style="text-align: center; padding: var(--spacing-lg);">
+  <section class="flex flex-col flex-col-start">
+    <h2>{title}</h2>
+    <p class="text-right" style="">{description}</p>
+    <!-- <ul class="flex flex-col flex-col-start">
+        <li>رفع باگ‌ها</li>
+        <li>افزودن ویژگی‌های جدید</li>
+        <li>بهبود عملکرد</li>
+        <li>نوشتن تست</li>
+    </ul> -->
+    {link && (
+      <a href={link} class="btn btn-primary" style="align-self:flex-end;">
+        شروع
+      </a>
+    )}
+  </section>
+  <img
+    src={img || 'assets/img/contribute.jpg'}
+    alt={title}
+    style={{
+      width: '400px',
+      height: '250px',
+      objectFit: 'cover',
+      borderRadius: 'var(--radius-sm)',
+      marginBottom: 'var(--spacing-md)'
+    }}
+  />
+</div>
