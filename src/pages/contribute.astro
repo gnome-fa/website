@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import ContributionGuideCard from "@components/ui/ContributionGuideCard.astro";
 ---
 
 <BaseLayout>
@@ -14,7 +15,12 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 
         <section class="section">
             <div class="container">
-                <div class="grid grid-2">
+                <div class="flex flex-col gap-lg">
+                    <ContributionGuideCard 
+                        title="توسعه و کدنویسی" 
+                        description="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد،د." 
+                        img="/assets/img/talks-thlug-revisto.png"
+                        link="/login" />
                     <div class="card card-large">
                         <div class="mb-lg text-center">
                             <svg width="64" height="64" fill="var(--brand-primary)" style="margin: 0 auto;">
