@@ -115,10 +115,119 @@
     margin: var(--spacing-lg) 0;
     text-align: center;
 }
+.content .code-block {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.content .code-block.collapsed pre {
+    max-height: 340px;
+    overflow: hidden;
+}
+
+.content .code-block pre {
+    margin-bottom: 0;
+    position: relative;
+    padding-top: 44px;
+    padding-bottom: 36px;
+}
+
+.content .code-block .code-fade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 56px;
+    border-bottom-left-radius: var(--radius-sm);
+    border-bottom-right-radius: var(--radius-sm);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.content .code-block:not(.collapsed) .code-fade {
+    display: none;
+}
+
+.content .code-block pre .code-toggle {
+    position: absolute;
+    font-family: var(--font-family);
+    right: 12px;
+    bottom: 8px;
+    z-index: 2;
+    font-size: 0.85em;
+    color: inherit;
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+}
 
 .content figcaption {
     font-size: var(--font-size-sm);
     color: var(--text-muted);
     margin-top: var(--spacing-xs);
     font-style: italic;
+}
+
+.content .code-block + h1,
+.content .code-block + h2,
+.content .code-block + h3,
+.content .code-block + h4,
+.content .code-block + h5,
+.content .code-block + h6 {
+    margin-top: var(--spacing-md);
+}
+
+.content .code-block pre .code-toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    gap: 8px;
+    z-index: 2;
+    background: transparent;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.content .code-block pre .code-lang {
+    font-family: var(--font-family);
+    font-size: 0.8em;
+    border: 1px solid currentColor;
+    color: currentColor;
+    background: color-mix(in srgb, currentColor 18%, transparent);
+    padding: 2px 10px;
+    border-radius: 999px;
+    line-height: 1;
+}
+
+.content .code-block pre .code-copy {
+    font-family: var(--font-family);
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: white;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.content .code-block pre .code-copy:hover {
+    background: color-mix(in srgb, currentColor 10%, transparent);
+    color: var(--brand-primary);
+}
+
+.content .code-block pre .code-copy svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+    fill: currentColor;
 }
