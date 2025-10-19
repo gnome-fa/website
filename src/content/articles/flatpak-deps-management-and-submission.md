@@ -1,7 +1,7 @@
 ---
 title: فلت هاب و فلت پک
 author: مهیار
-date: 2025-01-13
+date: 2025-10-19
 ---
 
 ![](/assets/img/flatpak-deps-management-and-submission/flatpak-banner.jpg)
