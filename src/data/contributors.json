@@ -44,5 +44,12 @@
     "role": "مشارکت‌کننده",
     "avatar": "/assets/img/avatars/mahyar.png",
     "github": "https://github.com/BuddySirJava"
-  }
+  },{
+  "id": "VC365",
+  "name": "VC365",
+  "role": "مشارکت‌کننده",
+  "avatar": "/assets/img/avatars/VC365.png",
+  "github": "https://github.com/VC365",
+  "website": "https://vc-365.ir"
+}
 ]
