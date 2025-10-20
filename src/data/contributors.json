@@ -37,5 +37,12 @@
     "role": "توسعه‌دهنده",
     "avatar": "/assets/img/avatars/sepehr.png",
     "github": "https://github.com/sepehr-rs"
+  },
+  {
+    "id": "BuddySirJava",
+    "name": "مهیار",
+    "role": "مشارکت‌کننده",
+    "avatar": "/assets/img/avatars/mahyar.png",
+    "github": "https://github.com/BuddySirJava"
   }
 ]
