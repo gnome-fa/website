@@ -11,12 +11,12 @@
     "prebuild": "npm run generate-articles"
   },
   "dependencies": {
-    "@astrojs/alpinejs": "^0.4.8",
-    "@astrojs/sitemap": "^3.5.1",
+    "@astrojs/alpinejs": "^0.4.9",
+    "@astrojs/sitemap": "^3.6.0",
     "@playform/compress": "^0.2.0",
     "@types/alpinejs": "^3.13.11",
-    "alpinejs": "^3.14.9",
-    "astro": "^5.13.3",
+    "alpinejs": "^3.15.0",
+    "astro": "^5.14.6",
     "astro-swiper": "^1.1.0"
   }
 }
