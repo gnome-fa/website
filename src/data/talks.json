@@ -9,5 +9,15 @@
     "slideUrl": "https://tehlug.org/events/presentations/278/gnome-circle.pdf",
     "tags": ["GTK", "توسعه", "Circle", "حلقه"],
     "thumbnail": "/assets/img/talks-thlug-revisto.png"
+  },
+    {
+    "id": "debian-13-party",
+    "title": "جامعه گنوم فارسی",
+    "speaker": "رویستو",
+    "date": "2025-11-14",
+    "description": "ارائه «جامعه گنوم فارسی» در جشن انتشار دبیان ۱۳",
+    "videoUrl": "https://www.youtube.com/watch?v=UPmNNygNQuc",
+    "tags": ["گنوم فارسی","مشارکت"],
+    "thumbnail": "/assets/img/debian-13-party.png"
   }
 ]
