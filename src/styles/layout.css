@@ -362,10 +362,6 @@
     margin-bottom: var(--spacing-xs);
 }
 
-.theme-dark .footer-links li a {
-    color: var(--text-primary);
-}
-
 .footer-bottom {
     text-align: center;
     padding-top: var(--spacing-lg);
