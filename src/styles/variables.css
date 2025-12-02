@@ -48,6 +48,7 @@
     --bg-secondary: var(--gnome-palette-light-2);
     --bg-card: var(--gnome-palette-light-1);
     --bg-muted: var(--gnome-palette-light-3);
+    --bg-footer: var(--gnome-palette-light-1);
 
     /* Text Colors */
     --text-primary: var(--gnome-palette-dark-3);
@@ -104,7 +105,8 @@
     --bg-card: #302942;
     --bg-muted: var(--gnome-palette-dark-1);
     --bg-head: var(--gnome-palette-dark-3);
-    
+    --bg-footer: #1a1622;
+
     --text-primary: var(--gnome-palette-light-1);
     --text-secondary: var(--gnome-palette-light-4);
     --text-muted: var(--gnome-palette-light-5);
