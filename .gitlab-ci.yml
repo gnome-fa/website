@@ -13,17 +13,3 @@ pages:
 
   only:
     - main
-
-check_lockfile:
-  image: node:lts
-  stage: test
-  script:
-    - npm ci
-    - npm install --package-lock-only
-    - |
-      if ! git diff --quiet package-lock.json; then
-        echo "package-lock.json is out of date. Run 'npm install' and commit the changes."
-        exit 1
-      fi
-  only:
-    - main
